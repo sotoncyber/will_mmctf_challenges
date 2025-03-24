@@ -1,5 +1,5 @@
 import flask
-from flask import render_template
+from flask import render_template, send_from_directory
 
 from challenge import app, forms
 
@@ -8,17 +8,26 @@ from challenge import app, forms
 def index() -> str:
     return render_template("index.html")
 
-@app.route('/1', methods=['GET'])
-def ch_1() -> str:
-    return render_template("challenge1.html")
+@app.route('/image', methods=['GET'])
+def ch1():
+    return send_from_directory('static', 'will_steg.dmg', as_attachment=True)
 
-@app.route('/2', methods=['GET', 'POST'])
-def ch_2() -> str:
-    form = forms.LoginForm()
-    if flask.request.method == 'POST':
-        if form.username.data == "admin" and form.password.data == "admin":
-            return render_template("challenge2.html", form=form, response="flag{some-flag-idk-lol}")
-        else:
-            return render_template("challenge2.html", form=form, response="Incorrect username/password")
-    return render_template("challenge2.html", form=form)
+@app.route('/DaveIsAGoatedWebmaster', methods=['GET'])
+def step1():
+    return render_template("step1.html")
 
+@app.route('/DaveIsAGoatedWebmaster/percy2.bmp', methods=['GET'])
+def step2():
+    return send_from_directory('static', 'percy2.bmp')
+
+@app.route('/crypto', methods=['GET'])
+def ch2():
+    return send_from_directory('static','skeleton.py')
+
+@app.route('/bob.jpg', methods=['GET'])
+def bob():
+    return send_from_directory('static','bob.jpg')
+
+@app.route('/gru.jpg', methods=['GET'])
+def gru():
+    return send_from_directory('static','gru.jpg')

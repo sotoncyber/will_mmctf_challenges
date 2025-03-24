@@ -1,13 +1,27 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-    <h1>Home</h1>
-    <p>Welcome to the home page</p>
+    <h1>Will's Challenges</h1>
     <div id="challenges">
-        <h2>Challenges</h2>
+        <h2>Steganography</h2>
+        <p>Steganography of Dave's Home Desktop</p>
         <ul>
-            <li><a href="/1">Example Challenge 1</a></li>
-            <li><a href="/2">Example Challenge 2</a></li>
+            <li><a href="/image">Disk Image</a></li>
+        </ul>
+        <h2>Cryptography</h2>
+        <p>One time pad but with images</p>
+        <ul>
+            <li><a href="/crypto">Skeleton Script</a></li>
+        </ul>
+        <h2>Useful Resources</h2>
+        <h3>Steganography</h3>
+        <ul>
+            <li><a href="https://www.cgsecurity.org/wiki/TestDisk_Download">Testdisk</a></li>
+            <li><a href="https://steghide.sourceforge.net/">Steghide download</a> or an <a href="https://steghide.sourceforge.net/">online encoder/decoder</a></li>
+        </ul>
+        <h3>Cryptography</h3>
+        <ul>
+            <li><a href="https://en.wikipedia.org/wiki/One-time_pad">One time pad</a></li>
         </ul>
     </div>
 {% endblock %}
