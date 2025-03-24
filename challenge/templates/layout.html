@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{%if title%}{{title}}{%else%}SUCSS Challenge{%endif%}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+    <div id="content" class="container">
+    {% block content %}{% endblock content %}
+    </div>
+</body>
+</html>
