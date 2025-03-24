@@ -22,7 +22,7 @@ def step2() -> flask.Response:
 
 @app.route('/crypto', methods=['GET'])
 def ch2() -> flask.Response:
-    return send_from_directory('static','skeleton.py')
+    return send_from_directory('static','skeleton.txt')
 
 @app.route('/bob.jpg', methods=['GET'])
 def bob() -> flask.Response:
