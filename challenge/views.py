@@ -13,7 +13,7 @@ def ch1() -> flask.Response:
     return send_from_directory('static', 'will_steg.dmg', as_attachment=True)
 
 @app.route('/DaveIsAGoatedWebmaster', methods=['GET'])
-def step1() -> flask.Response:
+def step1() -> str:
     return render_template("step1.html")
 
 @app.route('/DaveIsAGoatedWebmaster/percy2.bmp', methods=['GET'])
