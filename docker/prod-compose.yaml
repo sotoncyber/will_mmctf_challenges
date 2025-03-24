@@ -5,10 +5,10 @@ services:
       dockerfile: docker/Dockerfile
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.<challenge-name>.rule=Host(`<challenge-name>.sucss.org`)"
-      - "traefik.http.routers.<challenge-name>.tls=true"
-      - "traefik.http.routers.<challenge-name>.middlewares=authentik@file"
-      - "traefik.http.services.<challenge-name>.loadbalancer.server.port=8000"
+      - "traefik.http.routers.will_challenges.rule=Host(`will_challenges.sucss.org`)"
+      - "traefik.http.routers.will_challenges.tls=true"
+      - "traefik.http.routers.will_challenges.middlewares=authentik@file"
+      - "traefik.http.services.will_challenges.loadbalancer.server.port=8000"
 
     networks:
       - traefik
