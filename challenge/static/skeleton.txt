@@ -12,10 +12,10 @@ def encrypt(message,pad):
 
 width, height = super_secret.size
 pad = [[sum(super_secret.getpixel((x, y))) for x in range(width)] for y in range(height)]
-img = Image.open(decrypt('ʟʒ§ʗʍŦ',pad))
+img = Image.open(decrypt('ʟʒ§ʗʍ',pad))
 
 
 
 width, height = img.size
 pad = [[sum(img.getpixel((x, y))) for x in range(width)] for y in range(height)]
-plaintext = decrypt("śǃƥōłƟƭŕőƃƐǻĚǞǶƅāǋǹɬĬȖƲɴĆƏǒɖ",pad)
+plaintext = decrypt("śǃƠœŇƟƮŞĦƃƓǓŰǙǸƜģǁǹɖǸȖǈɴǔƏƫɓ",pad)
